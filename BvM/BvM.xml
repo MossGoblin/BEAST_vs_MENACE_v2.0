@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BvM</name>
+    </assembly>
+    <members>
+        <member name="T:BvM.Beast">
+            <summary>
+            Beast agent
+            </summary>
+        </member>
+        <member name="M:BvM.Beast.NextMove(System.Int32[])">
+            <summary>
+            Selects a move, based on the current state, then returns it to the caller
+            </summary>
+            <param name="grid">An int array, representing the game board</param>
+            <returns>Returns the next move, chosen by Beast</returns>
+        </member>
+        <member name="M:BvM.Beast.GetLineSum(System.Int32[],System.Int32)">
+            <summary>
+            Calculates the sum of a given line in the board grid
+            </summary>
+            <param name="grid">An int array, representing the game board</param>
+            <param name="lNum">a numerical index (0-8) for the line which sum is to be calculated</param>
+            <returns>Returns the sum of a given line in the board grid</returns>
+        </member>
+        <member name="T:BvM.Menace">
+            <summary>
+            Menace agent
+            </summary>
+        </member>
+        <member name="F:BvM.Menace.choisePool">
+            <summary>
+            Probability pool for the Menace agent
+            </summary>
+        </member>
+        <member name="F:BvM.Menace.defProbIndex">
+            <summary>
+            Default value for the probability pool cells
+            </summary>
+        </member>
+        <member name="M:BvM.Menace.NextMove(System.Int32[])">
+            <summary>
+            Selects a move, based on the current state, then returns it to the caller
+            </summary>
+            <param name="grid">An int array, representing the game board</param>
+            <returns>Returns the next move, chosen by Beast</returns>
+        </member>
+        <member name="M:BvM.Menace.ProbabilityMap(System.Int32[])">
+            <summary>
+            Generates a probabilirt map, based on the pool list for the corresponding board state
+            </summary>
+            <param name="boardState">An int array, representing the board state</param>
+            <returns></returns>
+        </member>
+        <member name="T:BvM.SwitchBoard">
+            <summary>
+            Main agent in the system - keeps the data and calls Beast and Menace
+            </summary>
+        </member>
+        <member name="F:BvM.SwitchBoard.gameBoard">
+            <summary>
+            Int array representing the current game state
+            </summary>
+        </member>
+        <member name="F:BvM.SwitchBoard.histRec">
+            <summary>
+            History track for the menace moves
+            </summary>
+        </member>
+    </members>
+</doc>
