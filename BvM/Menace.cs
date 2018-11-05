@@ -39,6 +39,9 @@ namespace BvM
         /// <returns>Returns the next move, chosen by Beast</returns>
         public int NextMove(int[] grid)
         {
+
+            // TODO : MENACE : Rework the method to ditch the ProbabilityMap()
+
             // Extract the probability map
             List<int> probPool = ProbabilityMap(grid);
 
@@ -60,6 +63,8 @@ namespace BvM
                     break;
                 }
             }
+
+            // TODO : MENACE : THINK ABOUT WRITING DOWN THE SELECTED MOVE
 
             return selectedCell;
         }
