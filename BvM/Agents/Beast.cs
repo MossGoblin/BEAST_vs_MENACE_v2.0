@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BvM
 {
     /// <summary>
-    /// Beast agent
+    /// Beast agent - "BEst Available STrategy" implementation
     /// </summary>
     class Beast
     {

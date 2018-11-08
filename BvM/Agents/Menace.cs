@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BvM
 {
     /// <summary>
-    /// Menace agent
+    /// Menace agent - "Machine Educable Noughts And Crosses Engine" implementation
     /// </summary>
     class Menace
     {
@@ -40,7 +40,7 @@ namespace BvM
         {
 
             // TO DO : MENACE : Rework the method to ditch the percentage() - DONE
-            // TODO : MENACE : Last! : Rework to return a grid
+            // TODO : MENACE : Last!
 
             // Extract the probability map
             List<int> probPool = ProbabilityMap(grid);
@@ -63,11 +63,10 @@ namespace BvM
                 }
             }
 
-            // TODO : MENACE : THINK ABOUT WRITING DOWN THE SELECTED MOVE
+            // TODO : MENACE : Think about how to write down the selected move
 
-            //return selectedCell;
-            // Add the MENACE value to the grid and return the grid
-            return new int[9];
+            grid[selectedCell] = 2;
+            return grid;
         }
 
         public void SavePool(string path)

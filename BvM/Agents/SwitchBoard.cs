@@ -14,7 +14,7 @@ namespace BvM
         /// </summary>
         private int[] gameBoard;
 
-        //// DISCONTINUED - Will be passed down from the caller directly to the Menace agent
+        //// DISCONTINUED - Will be passed down from the caller (UI or the history) directly to the Menace agent
         ///// <summary>
         ///// Default value for the probability pool cells
         ///// </summary>
