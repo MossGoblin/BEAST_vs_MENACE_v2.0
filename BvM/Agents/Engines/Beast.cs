@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BvM
 {
@@ -14,9 +13,9 @@ namespace BvM
         /// </summary>
         /// <param name="grid">An int array, representing the game board</param>
         /// <returns>Returns the next move, chosen by Beast</returns>
-        public int NextMove(int[] grid)
+        public int[] NextMove(int[] grid)
         {
-            return 0;
+            return new int[9];
             // TODO : BEAST : Game logic
         }
 

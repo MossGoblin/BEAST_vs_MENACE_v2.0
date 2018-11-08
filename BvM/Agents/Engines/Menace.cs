@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BvM
 {
@@ -37,14 +36,14 @@ namespace BvM
         /// </summary>
         /// <param name="grid">An int array, representing the game board</param>
         /// <returns>Returns the next move, chosen by Beast</returns>
-        public int NextMove(int[] grid)
+        public int[] NextMove(int[] grid)
         {
 
-            // TODO : MENACE : Rework the method to ditch the ProbabilityMap()
+            // TO DO : MENACE : Rework the method to ditch the percentage() - DONE
+            // TODO : MENACE : Last! : Rework to return a grid
 
             // Extract the probability map
             List<int> probPool = ProbabilityMap(grid);
-
 
             // Get the max number for the selection - equals the last element of the prob pool
             int maxCount = probPool[probPool.Count-1];
@@ -66,7 +65,9 @@ namespace BvM
 
             // TODO : MENACE : THINK ABOUT WRITING DOWN THE SELECTED MOVE
 
-            return selectedCell;
+            //return selectedCell;
+            // Add the MENACE value to the grid and return the grid
+            return new int[9];
         }
 
         public void SavePool(string path)
