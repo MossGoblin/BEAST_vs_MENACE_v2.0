@@ -65,19 +65,22 @@ namespace BvM
 
             // TODO : MENACE : Think about how to write down the selected move
 
+            //Update the value in the selected cell of the grid
             grid[selectedCell] = 2;
+            //Return teh grid as a result
             return grid;
         }
 
         public void SavePool(string path)
         {
             // TODO : MENACE : Save the pool into a file (path)
+            throw new NotImplementedException();
         }
 
         public Dictionary<int[], List<int>> LoadPool(string path)
         {
             // TODO : MENACE : Load the last pool from a file (path)
-            return new Dictionary<int[], List<int>>();
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -102,8 +105,8 @@ namespace BvM
             }
             if (!hasChoises)
             {
-                // RETURN SingleZero list if there are no available choices
-                return new List<int> { 0 };
+                // RETURN No available choices Exception
+                throw new InvalidOperationException("No available choises");
             }
 
             // If there are ANY available choices
@@ -118,7 +121,6 @@ namespace BvM
                 probPool[counter] = accumulation + probList[counter];
                 accumulation = probPool[counter];
             }
-
             return probPool;
         }
 

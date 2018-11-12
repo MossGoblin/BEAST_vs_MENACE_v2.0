@@ -8,6 +8,28 @@ namespace BvM
     /// </summary>
     class Beast
     {
+
+        // Line definitions
+        // 1, 2, 3
+        // 4, 5, 6
+        // 7, 8, 9
+        // 1, 4, 7
+        // 2, 5, 8
+        // 3, 6, 9
+        // 1, 5, 9
+        // 3, 5, 7
+
+        private int[,] lineDefs = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 },
+            { 1, 4, 7 },
+            { 2, 5, 8 },
+            { 3, 6, 9 },
+            { 1, 5, 9 },
+            { 3, 5, 7 },
+            };
+
         /// <summary>
         /// Selects a move, based on the current state, then returns it to the caller
         /// </summary>
@@ -15,7 +37,7 @@ namespace BvM
         /// <returns>Returns the next move, chosen by Beast</returns>
         public int[] NextMove(int[] grid)
         {
-            return new int[9];
+            throw new NotImplementedException();
             // TODO : BEAST : Game logic
         }
 
@@ -28,30 +50,9 @@ namespace BvM
         // Retrieve the state of a line number
         public int GetLineSum(int[] grid, int lNum)
         {
-            // Line definitions
-            // 1, 2, 3
-            // 4, 5, 6
-            // 7, 8, 9
-            // 1, 4, 7
-            // 2, 5, 8
-            // 3, 6, 9
-            // 1, 5, 9
-            // 3, 5, 7
-
-            int[,] lineDefs = {
-            { 1, 2, 3 },
-            { 4, 5, 6 },
-            { 7, 8, 9 },
-            { 1, 4, 7 },
-            { 2, 5, 8 },
-            { 3, 6, 9 },
-            { 1, 5, 9 },
-            { 3, 5, 7 },
-            };
-
-            int cellOne = lineDefs[lNum, 0];
-            int cellTwo = lineDefs[lNum, 1];
-            int cellThree = lineDefs[lNum, 2];
+            int cellOne = this.lineDefs[lNum, 0];
+            int cellTwo = this.lineDefs[lNum, 1];
+            int cellThree = this.lineDefs[lNum, 2];
             return grid[cellOne] + grid[cellTwo] + grid[cellThree];
         }
     }
