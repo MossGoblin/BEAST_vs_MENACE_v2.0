@@ -14,12 +14,6 @@ namespace BvM
         /// </summary>
         private int[] gameBoard;
 
-        //// DISCONTINUED - Will be passed down from the caller (UI or the history) directly to the Menace agent
-        ///// <summary>
-        ///// Default value for the probability pool cells
-        ///// </summary>
-        //private int defProbIndex;
-
         /// <summary>
         /// History track for the menace moves
         /// </summary>
@@ -30,13 +24,6 @@ namespace BvM
             get { return histRec; }
             set { histRec = value; }
         }
-
-
-        //public int DefProbIndex
-        //{
-        //    get { return defProbIndex; }
-        //    set { defProbIndex = value; }
-        //}
 
         public int[] GameBoard
         {

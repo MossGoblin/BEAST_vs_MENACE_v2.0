@@ -39,9 +39,6 @@ namespace BvM
         public int[] NextMove(int[] grid)
         {
 
-            // TO DO : MENACE : Rework the method to ditch the percentage() - DONE
-            // TODO : MENACE : Last!
-
             // Extract the probability map
             List<int> probPool = ProbabilityMap(grid);
 
@@ -66,7 +63,7 @@ namespace BvM
             // TODO : MENACE : Think about how to write down the selected move
 
             //Update the value in the selected cell of the grid
-            grid[selectedCell] = 2;
+            grid[selectedCell] = -2;
             //Return teh grid as a result
             return grid;
         }
