@@ -9,4 +9,8 @@
     <DocumentationFile>C:\Users\Yolly\Google Drive\Codee\[ GITHUBBED ]\[ MyStuff ]\BvM\BvM\BvM.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

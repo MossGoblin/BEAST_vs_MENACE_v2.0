@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BvM.Controllers;
+using System;
 
 namespace BvM
 {
@@ -6,9 +7,12 @@ namespace BvM
     {
         static void Main(string[] args)
         {
+            UserInterface ui = new UserInterface();
             try
             {
-                Console.WriteLine("Hello World!");
+                string writeResult = ui.Record(false, "temp", "testing Record method overwriting");
+                Console.WriteLine(writeResult);
+                Console.ReadLine();
             }
             catch (Exception)
             {

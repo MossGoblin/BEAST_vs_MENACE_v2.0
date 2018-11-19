@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BvM
+namespace BvM.Controllers
 {
     /// <summary>
     /// Main agent in the system - keeps the data and calls Beast and Menace
