@@ -72,5 +72,18 @@ namespace BvM.Controllers
                 }
             }
         }
+
+        private static string TimeStamp()
+        {
+            return (DateTime.Now.ToString("[ dd-MM-yy / hh:mm:ss]"));
+        }
+        private static string TimeStamp(int gameNumber)
+        {
+            return (DateTime.Now.ToString($"[ {gameNumber} / dd-MM-yy / hh:mm:ss]"));
+        }
+        private static string TimeStamp(string stamp)
+        {
+            return (DateTime.Now.ToString($"[ \"{stamp}\" / dd-MM-yy / hh:mm:ss]"));
+        }
     }
 }
