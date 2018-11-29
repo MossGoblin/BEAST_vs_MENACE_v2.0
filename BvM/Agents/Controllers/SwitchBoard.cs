@@ -19,6 +19,13 @@ namespace BvM.Controllers
         /// </summary>
         private Queue<int> histRec;
 
+        private InterfaceManager iManager;
+
+        public SwitchBoard(InterfaceManager iManager)
+        {
+            this.IManager = iManager;
+        }
+
         public Queue<int> HistRec
         {
             get { return histRec; }
@@ -30,5 +37,7 @@ namespace BvM.Controllers
             get { return gameBoard; }
             set { gameBoard = value; }
         }
+
+        public InterfaceManager IManager { get => iManager; set => iManager = value; }
     }
 }

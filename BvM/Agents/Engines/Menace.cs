@@ -70,13 +70,13 @@ namespace BvM
 
         public void SavePool(string path)
         {
-            // TODO : MENACE : Save the pool into a file (path)
+            // TODO : MENACE : Save the pool into a file (path) - Bounce to IM
             throw new NotImplementedException();
         }
 
         public Dictionary<int[], List<int>> LoadPool(string path)
         {
-            // TODO : MENACE : Load the last pool from a file (path)
+            // TODO : MENACE : Load the last pool from a file (path) - Bounce to IM
             throw new NotImplementedException();
         }
 

@@ -7,16 +7,18 @@ namespace BvM
     {
         static void Main(string[] args)
         {
-            UserInterface ui = new UserInterface();
+            InterfaceManager im = new InterfaceManager();
+            SwitchBoard sb = new SwitchBoard(im);
             try
             {
-                string writeResult = ui.Record(false, "temp", "testing timestamp and Record method overwriting");
+                //string writeResult = sb.IManager.Record(false, temp, "throwing the Interface Manager to the SwitchBoard");
+                string writeResult = sb.IManager.Record(false, FileNameList.temp, "Check InterfaceManager - setting up files");
                 Console.WriteLine(writeResult);
                 Console.ReadLine();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Oops!");
+                Console.WriteLine($"Oops!: {ex.Message}");
             }
         }
     }
