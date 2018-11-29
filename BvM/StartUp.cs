@@ -10,7 +10,7 @@ namespace BvM
             UserInterface ui = new UserInterface();
             try
             {
-                string writeResult = ui.Record(false, "temp", "testing Record method overwriting");
+                string writeResult = ui.Record(false, "temp", "testing timestamp and Record method overwriting");
                 Console.WriteLine(writeResult);
                 Console.ReadLine();
             }

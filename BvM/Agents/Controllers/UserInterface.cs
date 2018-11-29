@@ -11,7 +11,7 @@ namespace BvM.Controllers
     /// </summary>
     public class UserInterface
     {
-        private string dataFilePath;
+        private const string dataFilePath = "../../../Data/";
         Dictionary<string, string> fileNames;
 
         /// <summary>
@@ -20,7 +20,6 @@ namespace BvM.Controllers
         /// </summary>
         public UserInterface()
         {
-            this.dataFilePath = "../../../Data/";
             fileNames = new Dictionary<string, string>();
             fileNames.Add("temp", "tempData.bvm");
             fileNames.Add("stats", "stats.bvm");
@@ -30,7 +29,7 @@ namespace BvM.Controllers
         /// <summary>
         /// Records data in a text file
         /// </summary>
-        /// <param name="append">True to append the file, False to overwrite it</param>
+        /// <param name="append">'True' to append the file, 'False' to overwrite it</param>
         /// <param name="repo">Name of the repository - stats, history, menace</param>
         /// <param name="data">String to be appendedwritten in the repo</param>
         /// <returns></returns>
@@ -46,9 +45,11 @@ namespace BvM.Controllers
                     return $"writing in \"{repo}\" cancelled";
                 }
             }
-            // TODO : TIMESTAMP at some point!!
             string fullPath = Path.Combine(dataFilePath, fileNames[repo]);
             StreamWriter writer = new StreamWriter(fullPath, append);
+            // TODO : TIMESTAMP at some point!!
+            string timeStamp = TimeStamp("something wicked this way comes");
+            writer.WriteLine(timeStamp);
             writer.WriteLine(data);
             writer.Flush();
             return "Done";
@@ -73,17 +74,43 @@ namespace BvM.Controllers
             }
         }
 
+        /// <summary>
+        /// Generates the timestamp in format "dd-MM-yy : hh:mm:ss"
+        /// </summary>
+        /// <returns></returns>
+        private static string GetStamp()
+        {
+            return DateTime.Now.ToString("dd-MM-yy : hh:mm:ss");
+        }
+
+        /// <summary>
+        /// Generic timestamp: [ dd-MM-yy : hh:mm:ss ]
+        /// </summary>
+        /// <returns></returns>
         private static string TimeStamp()
         {
-            return (DateTime.Now.ToString("[ dd-MM-yy / hh:mm:ss]"));
+            //return (DateTime.Now.ToString($"[ dd-MM-yy : hh:mm:ss ]"));
+            return String.Concat("[ ", GetStamp(), " ]");
         }
+
+        /// <summary>
+        /// Timestamp including the game number: [ {gameNumber} : dd-MM-yy : hh:mm:ss ]
+        /// </summary>
+        /// <param name="gameNumber"></param>
+        /// <returns></returns>
         private static string TimeStamp(int gameNumber)
         {
-            return (DateTime.Now.ToString($"[ {gameNumber} / dd-MM-yy / hh:mm:ss]"));
+            return String.Concat($"[ gm {gameNumber} : ", GetStamp(), " ]");
         }
+
+        /// <summary>
+        /// Extended timestamp, including a description string: [ "{stamp}" : dd-MM-yy : hh:mm:ss ]
+        /// </summary>
+        /// <param name="stamp"></param>
+        /// <returns></returns>
         private static string TimeStamp(string stamp)
         {
-            return (DateTime.Now.ToString($"[ \"{stamp}\" / dd-MM-yy / hh:mm:ss]"));
+            return String.Concat($"[ \"{stamp}\" : ", GetStamp(), " ]");
         }
     }
 }
