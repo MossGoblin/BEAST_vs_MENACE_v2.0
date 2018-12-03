@@ -184,10 +184,11 @@ namespace BvM.Controllers
         {
             return String.Concat($"[ \"{stamp}\" : ", GetStamp(), " ]");
         }
-
-        
     }
 
+    /// <summary>
+    /// An ENUM listing the types of record files to be kept
+    /// </summary>
     public enum FileNameList
     {
         logBook = 0,
