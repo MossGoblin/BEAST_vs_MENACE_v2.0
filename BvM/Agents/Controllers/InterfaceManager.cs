@@ -38,7 +38,7 @@ namespace BvM.Controllers
             try
             {
                 StreamReader reader = new StreamReader(logBookPath);
-                continuousGame = reader.ReadLine() == "old"; // TODO : REWORK! : turn this into a three case switch
+                continuousGame = reader.ReadLine() == "old"; // TODO : REWORK! : turn this into a three case switch - old game seq, new game sew, reset
                 // read the last 3 file names
                 for (int counter = 0; counter < 3; counter++)
                 {
@@ -78,7 +78,7 @@ namespace BvM.Controllers
                     throw new ArgumentException(ex.Message);
                 }
             }
-            else // TODO : HERE : if there should be a new game -- reset history, DOT NOT RESET menace
+            else // TODO : HERE : if there should be a new game -- reset history, DO NOT RESET menace
             {
                 bool resetHistory = ResetFile(FullPath(FileNameList.history.ToString()));
             }
