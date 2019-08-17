@@ -1,4 +1,4 @@
-# BEST_vs_MENACE_v2.0
+# BEAST_vs_MENACE_v2.0
 Beast Vs Menace with proper classes (hopefully)
 
 A tic-tac-toe machine learning project
