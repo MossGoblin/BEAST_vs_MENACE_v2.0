@@ -12,5 +12,5 @@ ___For the moment there will be only notes___
 __// ChangeLog__
 
 __// TODO : NEXT__
-* decide on a final GamePlan for Beast - revice the old one
+* decide on a final GamePlan for Beast - revise the old one
 * who starts first - shall there be a preference?
